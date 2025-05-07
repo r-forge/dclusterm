@@ -4,8 +4,16 @@ Title: Model-Based Detection of Disease Clusters
 Version: 1.0-2
 Encoding: UTF-8
 Date: 2025-05-07
-Author: Virgilio Gomez-Rubio, Paula Esther Moraga Serrano, Barry
-    Rowlingson
+Authors@R: c(person(given = "Virgilio",
+                      family = "Gomez-Rubio",
+                      role = c("aut", "cre"),
+                      email = "virgilio.gomez@uclm.es"),
+               person(given = c("Paula", "Esther", "Moraga"),
+                      family = "Serrano",
+                      role = "aut"),
+               person(given = "Barry",
+                      family = "Rowlingson",
+                      role = "aut"))
 Maintainer: Virgilio Gomez-Rubio <virgilio.gomez@uclm.es>
 Depends:
     R (>= 3.5.0),

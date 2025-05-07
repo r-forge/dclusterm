@@ -49,7 +49,7 @@ population inside the cluster is less than fractpop, and the maximum
 distance to the center is less than radius.
 For each one of these clusters, the log-likelihood ratio test statistic
 for comparing the alternative model with the cluster versus the null model
-of no clusters (if model is \link{glm}, \link{glmer} or zeroinfl),
+of no clusters (if model is \link{glm}, \link[lme4]{glmer} or zeroinfl),
 or the DIC (if model is \code{inla}) is calculated.
 The cluster with maximum value of the log-likelihood ratio or
 minimum DIC is returned.

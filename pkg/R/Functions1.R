@@ -6,13 +6,13 @@
 ##' less than radius.
 ##' The search can be done for spatial or spatio-temporal clusters.
 ##' The significance of the clusters is obtained with a Monte Carlo procedure
-##' or based on the chi-square distribution (\link{glm}, \link{glmer} or zeroinfl models)
+##' or based on the chi-square distribution (\link{glm}, \link[lme4]{glmer} or zeroinfl models)
 ##' or DIC (\code{inla} models).
 ##'
 ##' @param stfdf object containing the data.
-##' If data is spatial, stfdf is a \link{SpatialPolygonsDataFrame} object from sp.
-##' If data is spatio-temporal, stfdf is a \link{STFDF} object from spacetime.
-##' The data contain a \link{SpatialPolygons} object with the coordinates,
+##' If data is spatial, stfdf is a \link[sp]{SpatialPolygonsDataFrame} object from sp.
+##' If data is spatio-temporal, stfdf is a \link[spacetime]{STFDF} object from spacetime.
+##' The data contain a \link[sp]{SpatialPolygons} object with the coordinates,
 ##' and if applicable, a time object holding time information,
 ##' an endTime vector of class \link{POSIXct} holding end points of time intervals.
 ##' It also contain a data.frame with the Observed, Expected and potential covariates
@@ -118,8 +118,8 @@ DetectClustersModel <- function(stfdf, thegrid = NULL, radius = Inf,
   
   
   #############################
-  # If data is spatial, stfdf is a \link{SpatialPolygonsDataFrame} object. We need to convert it to \link{STFDF}. We add date as.Date("1970-01-01").
-  # If data is spatio-temporal, stfdf is a \link{STFDF} object.
+  # If data is spatial, stfdf is a \link[sp]{SpatialPolygonsDataFrame} object. We need to convert it to \link[spacetime]{STFDF}. We add date as.Date("1970-01-01").
+  # If data is spatio-temporal, stfdf is a \link[spacetime]{STFDF} object.
 
   #Spatial object?
   is.sp <- FALSE
