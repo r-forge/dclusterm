@@ -55,7 +55,7 @@
 ##'
 ##' Bilancia M, Demarinis G (2014) Bayesian scanning of spatial disease rates
 ##' with the Integrated Nested Laplace Approximation (INLA). Statistical
-##' Methods & Applications 23(1): 71 - 94. \url{http://dx.doi.org/10.1007/s10260-013-0241-8}
+##' Methods & Applications 23(1): 71 - 94. \doi{10.1007/s10260-013-0241-8}
 ##'
 ##' Jung I (2009) A generalized linear models approach to spatial scan 
 ##' statistics for covariate adjustment. Statistics in Medicine 28(7): 1131 - 1143.
@@ -123,7 +123,7 @@ DetectClustersModel <- function(stfdf, thegrid = NULL, radius = Inf,
 
   #Spatial object?
   is.sp <- FALSE
-  if(class(stfdf) == "SpatialPolygonsDataFrame"){
+  if(inherits(stfdf, "SpatialPolygonsDataFrame")){
     is.sp <- TRUE
     stfdf <- STFDF(as(stfdf, "SpatialPolygons"), xts(1, as.Date("1970-01-01")),
                    stfdf@data, endTime = as.POSIXct(strptime(c("1970-01-01"), "%Y-%m-%d"), tz = "GMT"))
